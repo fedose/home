@@ -7,7 +7,7 @@ import './App.css';
 function Home() {
   const Category = "Homepage";
 
-  const DirectorsFilms = "Directors Films";
+  const DirectorsFilms = "Directors’ Films";
   const ColorPairs = "Color Pairs";
   const OldMatches = "Old Matches";
   const Ahrefs = "Ahrefs / Since 2016";
@@ -92,29 +92,29 @@ function Home() {
         <section>
           <h2>Projects</h2>
           <ul>
-            <li onClick={HandleOldMatches}><a href="https://directorsfilms.com" target="_blank">{DirectorsFilms}</a></li>
+            <li onClick={HandleOldMatches}><a href="https://directorsfilms.com" target="_blank" rel="noopener noreferrer">{DirectorsFilms}</a></li>
             <li onClick={HandleColorPairs}><Link to="/color-pairs">{ColorPairs}</Link></li>
-            <li onClick={HandleOldMatches}><a href="https://www.instagram.com/oldmatches/" target="_blank">{OldMatches}</a></li>
+            <li onClick={HandleOldMatches}><a href="https://www.instagram.com/oldmatches/" target="_blank" rel="noopener noreferrer">{OldMatches}</a></li>
           </ul>
         </section>
         <section>
           <h2>Work</h2>
           <ul>
-            <li onClick={HandleAhrefs}><a href="https://ahrefs.com" target="_blank">{Ahrefs}</a></li>
-            <li onClick={HandlePhobia}><a href="https://claustrophobia.com/" target="_blank">{Phobia}</a></li>
-            <li onClick={HandleLebedev}><a href="https://www.artlebedev.ru/fedose/" target="_blank">{Lebedev}</a></li>
+            <li onClick={HandleAhrefs}><a href="https://ahrefs.com" target="_blank" rel="noopener noreferrer">{Ahrefs}</a></li>
+            <li onClick={HandlePhobia}><a href="https://claustrophobia.com/" target="_blank" rel="noopener noreferrer">{Phobia}</a></li>
+            <li onClick={HandleLebedev}><a href="https://www.artlebedev.ru/fedose/" target="_blank" rel="noopener noreferrer">{Lebedev}</a></li>
           </ul>
         </section>
         <section>
           <h2>Contact</h2>
           <ul>
             <li onClick={HandleEmail}><a href="mailto:fokinf@gmail.com">{Email}</a></li>
-            <li onClick={HandleFacebook}><a href="https://www.facebook.com/fokinf" target="_blank">{Facebook}</a></li>
-            <li onClick={HandleInstagram}><a href="https://www.instagram.com/fedose" target="_blank">{Instagram}</a></li>
+            <li onClick={HandleFacebook}><a href="https://www.facebook.com/fokinf" target="_blank" rel="noopener noreferrer">{Facebook}</a></li>
+            <li onClick={HandleInstagram}><a href="https://www.instagram.com/fedose" target="_blank" rel="noopener noreferrer">{Instagram}</a></li>
           </ul>
         </section>
         <footer>
-          2010–2024
+          2010–{new Date().getFullYear()}
         </footer>
       </main>
     </div>

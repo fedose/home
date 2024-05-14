@@ -16,7 +16,7 @@ function UpdateColor(props) {
   const [count, setCount] = useState(0);
 
   const UpdateCounter = () => {
-    if (count == colors.length - 1) {
+    if (count === colors.length - 1) {
       return setCount(0);
     }
     setCount(count + 1);
@@ -26,13 +26,13 @@ function UpdateColor(props) {
     <button
       type="button"
       className="button"
-      onClick={() => (
-        props.setLeft(colors[count].left),
-        props.setRight(colors[count].right),
-        props.setCore(colors[count].core),
-        UpdateCounter(),
-        HandleExample()
-      )}
+      onClick={() => {
+        props.setLeft(colors[count].left);
+        props.setRight(colors[count].right);
+        props.setCore(colors[count].core);
+        UpdateCounter();
+        HandleExample();
+      }}
     >
       <img
         className="icon-small"

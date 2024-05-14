@@ -12,7 +12,6 @@ import useClickOutside from './useClickOutside';
 import LeftHalfIcon from './left-half.svg';
 import RightHalfIcon from './right-half.svg'; 
 import CoreIcon from './core.svg';
-import ClickIcon from './click.svg';
 import './ColorPairs.css';
 
 function ColorPairs() {
