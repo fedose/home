@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+:root {
+  --sans-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono-font: Menlo, Consolas, monospace;
+  --accent-color: rgb(120, 50, 255);
+  --accent-color-muted: rgba(120, 50, 255, .3);
+  --bg-color: white; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html, body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body, main {
+  background-color: var(--bg-color);
+}
+
+.pattern {
+  background: center -1px;
+  background-image:
+    linear-gradient(var(--accent-color-muted) 1px, transparent 1px),
+    linear-gradient(90deg, var(--accent-color-muted) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+main {
+  display: grid;
+  margin: auto;
+  max-width: 1368px;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 24px;
+  padding: 24px;
+  height: 100vh;
+  box-sizing: border-box;
+  box-shadow:
+    0 0 0 25px var(--bg-color),
+    0 0 0 26px var(--accent-color-muted);
+}
+
+header {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+header, section {
+  padding-bottom: 48px;
+}
+
+footer {
+  align-self: end;
+}
+
+header, footer, h1, h2, a {
+  font-family: var(--sans-font);
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: normal;
+  color: var(--accent-color);
+}
+
+h2 {
+  padding-bottom: 6px;
+}
+
+ul {
+  padding-top: 17px;
+  border-top: 1px solid var(--accent-color-muted);
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(0, 0, 0);
+}
+
+header::selection, footer::selection, h1::selection, h2::selection, p::selection, a::selection {
   color: white;
+  background-color: var(--accent-color);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 992px) {
+  main {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 16px;
   }
-  to {
-    transform: rotate(360deg);
+
+  header {
+    grid-column-start: 1;
+    grid-column-end: 2;
   }
 }
