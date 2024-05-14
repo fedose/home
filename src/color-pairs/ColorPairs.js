@@ -46,11 +46,11 @@ function ColorPairs() {
   return (
     <div
       className="app"
-      onClick={() => (
-        setpickersOpened(true),
-        setintroOpened(false),
-        HandleArea()
-      )}
+      onClick={() => {
+        setpickersOpened(true);
+        setintroOpened(false);
+        HandleArea();
+      }}
     >
       <Helmet>
         <title>Color Pairs – Explore color relativity</title>
